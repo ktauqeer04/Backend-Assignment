@@ -1,4 +1,5 @@
 module.exports = {
     ServerConfig: require('./server-config'),
-    CloudinaryConfig: require('./cloudinary')
+    CloudinaryConfig: require('./cloudinary'),
+    ExpressRateLimit: require('./rate-limit')
 }

@@ -1,6 +1,6 @@
 const express = require('express');
 const allRoutes = require('./routes/index');
-const { ServerConfig } = require('./config/index');
+const { ServerConfig, ExpressRateLimit } = require('./config/index');
 const PORT = ServerConfig.PORT;
 const cors = require('cors');
 const helmet = require('helmet');
@@ -14,6 +14,7 @@ async function init(){
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(helmet());
+    app.use(ExpressRateLimit.limiter);
     app.use('/v1', allRoutes);
 
 

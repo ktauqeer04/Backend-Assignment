@@ -4,8 +4,6 @@ const videoSchema = require('./video');
 const userSchema = require('./user');
 const mongoose = require('mongoose');
 
-console.log(MONGO_URL);
-
 mongoose.connect(MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
